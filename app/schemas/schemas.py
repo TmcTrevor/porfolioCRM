@@ -118,6 +118,7 @@ class ActivityUpdate(BaseModel):
     description: Optional[str] = None
     completed: Optional[int] = None
     due_date: Optional[datetime] = None
+    deal_id: Optional[int] = None
 
 
 class Activity(ActivityBase):

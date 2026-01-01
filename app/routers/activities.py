@@ -53,6 +53,13 @@ def update_activity(activity_id: int, activity: ActivityUpdate, db: Session = De
         raise HTTPException(status_code=404, detail="Activity not found")
     
     update_data = activity.model_dump(exclude_unset=True)
+    
+    # Verify deal exists if deal_id is being updated
+    if "deal_id" in update_data and update_data["deal_id"] is not None:
+        deal = db.query(Deal).filter(Deal.id == update_data["deal_id"]).first()
+        if deal is None:
+            raise HTTPException(status_code=404, detail="Deal not found")
+    
     for key, value in update_data.items():
         setattr(db_activity, key, value)
     

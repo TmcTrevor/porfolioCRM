@@ -24,7 +24,7 @@ A Customer Relationship Management (CRM) system built with FastAPI for portfolio
 1. Clone the repository:
 ```bash
 git clone https://github.com/TmcTrevor/porfolioCRM.git
-cd porfolioCRM
+cd portfolioCRM
 ```
 
 2. Create a virtual environment:
@@ -149,7 +149,7 @@ curl -X POST "http://localhost:8000/api/v1/activities/" \
 ## Project Structure
 
 ```
-porfolioCRM/
+portfolioCRM/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py              # FastAPI application
