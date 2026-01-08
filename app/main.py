@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.v1.mainRouter import mainRouter
+
+from studies.router import router as studies_router
+from skills.router import router as skills_router
+from experiences.router import router as experiences_router
+from projects.router import router as projects_router
+
 app = FastAPI(
     title="Portfolio API",
     version="0.1.0",
@@ -19,7 +24,18 @@ app.add_middleware(
 )
 
 
-app.include_router(mainRouter)
+# Include feature routers
+app.include_router(studies_router, prefix="/study", tags=["study"])
+app.include_router(skills_router, prefix="/skills", tags=["skills"])
+app.include_router(experiences_router, prefix="/experiences", tags=["experiences"])
+app.include_router(projects_router, prefix="/projects", tags=["projects"])
+
+
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
+
+
+@app.get("/healthy")
+def healthy_check():
+    return {"status": "healthy"}
