@@ -2,12 +2,7 @@ from enum import Enum
 from typing import List, Optional
 
 from pydantic import BaseModel, HttpUrl
-from shared.common import ProjectLinkKind
-
-
-class ProjectLink(BaseModel):
-    kind: ProjectLinkKind
-    href: HttpUrl
+from shared.common import ProjectLinkKind, ProjectLink
 
 
 class ProjectType(str, Enum):
