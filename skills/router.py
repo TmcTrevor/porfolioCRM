@@ -19,8 +19,6 @@ async def create_skill(skill: Skill) -> Skill:
     return await add_skill(skill)
 
 
-
-
 @router.put("/{skill_name}", response_model=Skill)
 async def modify_skill(skill_name: str, payload: Skill) -> Skill:
     """

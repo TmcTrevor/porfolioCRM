@@ -11,8 +11,6 @@ from studies.service import (
 router = APIRouter()
 
 
-
-
 @router.get("", response_model=AcademicList)
 async def list_academics(
     page: int = Query(1, ge=1),

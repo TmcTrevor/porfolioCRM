@@ -7,11 +7,11 @@ from projects.schemas import (
     ProjectImage,
     ProjectCTA,
     ProjectLink,
-    ProjectLinkKind,
     ProjectList,
     ProjectCreate,
     ProjectUpdate,
 )
+from shared.common import ProjectLinkKind
 
 
 MOCK_PROJECTS: List[Project] = [

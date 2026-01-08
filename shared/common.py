@@ -1,6 +1,5 @@
 from enum import Enum
 from pydantic import BaseModel, HttpUrl
-from enum import Enum
 
 
 class ProjectLinkKind(str, Enum):
@@ -27,7 +26,7 @@ class SkillCategory(str, Enum):
 
 class SkillLevel(str, Enum):
     WorkingKnowl = "Working Knowl"
-    confortable = "Confortable"
+    comfortable = "Comfortable"
     strong = "Strong"
     expert = "Expert"
     learning = "Learning"

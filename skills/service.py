@@ -7,7 +7,7 @@ from shared.common import SkillLevel, SkillTier, SkillCategory
 MOCK_SKILLS: List[Skill] = [
     Skill(name="React", category=SkillCategory.frontEnd, skillTier=SkillTier.main, skillLevel=SkillLevel.expert),
     Skill(name="TypeScript", category=SkillCategory.frontEnd, skillTier=SkillTier.main, skillLevel=SkillLevel.expert),
-    Skill(name="FastAPI", category=SkillCategory.backend, skillTier=SkillTier.main, skillLevel=SkillLevel.confortable),
+    Skill(name="FastAPI", category=SkillCategory.backend, skillTier=SkillTier.main, skillLevel=SkillLevel.comfortable),
     Skill(name="PostgreSQL", category=SkillCategory.database_data, skillTier=SkillTier.main, skillLevel=SkillLevel.strong),
     Skill(name="Docker", category=SkillCategory.devops_cloud, skillTier=SkillTier.main, skillLevel=SkillLevel.strong),
     Skill(name="AWS", category=SkillCategory.devops_cloud, skillTier=SkillTier.learning, skillLevel=SkillLevel.learning),
